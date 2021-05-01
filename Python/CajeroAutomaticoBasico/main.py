@@ -4,20 +4,13 @@
 
 #Definicion de la clase Cliente.
 class Cliente:
-    def __init__(self):
+    #Constructor
+    def __init__(self, Nombre, TipoDeCuenta, NoDeCuenta, Saldo):
         #Todos los atributos de la clase cliente son privados.
-        self.__Nombre = " "
-        self.__TipoDeCuenta = " "
-        self.__NoDeCuenta = 0
-        self.__Saldo = 0
-
-    #Todos los metodos de la clase cliente son publicos.
-    def Registro(self, Nombre, TipoDeCuenta, NoDeCuenta, Saldo):
         self.__Nombre = Nombre
         self.__TipoDeCuenta = TipoDeCuenta
         self.__NoDeCuenta = NoDeCuenta
         self.__Saldo = Saldo
-        return None
 
     def Retiro(self, monto):
         self.__Saldo = self.__Saldo - monto
@@ -32,8 +25,7 @@ class Cliente:
 
 #Definicion de la funcion main.
 def main():
-    cliente1 = Cliente()
-    cliente1.Registro("Pedro Gutierrez", "Premier", 1234567890, 1000)
+    cliente1 = Cliente("Pedro Gutierrez", "Premier", 1234567890, 1000)
     option = 0
 
     while not(option == 4):
